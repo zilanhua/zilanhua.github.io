@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片美化测试</title>
+    <style>
+    div{
+        width:480px;
+        height:250px;
+        background-color:#eee;
+        position:absolute;
+        top:200px;
+        left:400px;
+    }
+   
+    figure{
+        width:380px;
+        height:200px;
+        border:50px solid #000;
+        box-shadow:0px 0px 10px #000;
+        overflow:hidden;
+        transform:scale(1);
+    }
+    figure img{
+        transform:scale(1);
+        transition:all .1s;
+    }
+    figure:hover img{
+        transform:scale(2);
+    }
+    figure figcaption{
+        position:absolute;
+        bottom:0;
+        z-index:10;
+        width:100%;
+        height:50px;
+        color:rgba(0,0,0,0);
+        background-color:rgba(255,255,255,0);
+        text-align:center;
+        line-height:30px;
+        transition:color 1s, background-color .5s;
+    }
+    figure:hover figcaption{
+        color:rgba(0,0,0,1);
+        background-color:rgba(255,255,255,.1);
+    }
+    </style>
+</head>
+<body>
+<div>
+
+    <figure>
+    <figcaption><pre>别跑</pre></figcaption>
+    <img src="http://imgsrc.baidu.com/forum/w%3D580/sign=a6e6384d5d6034a829e2b889fb1249d9/a8ba942397dda14492f7ddfeb3b7d0a20df48669.jpg" alt="图片来自百度"> 
+    </figure>
+</div>
+</body>
+</html>
